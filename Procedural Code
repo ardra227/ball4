@@ -1,0 +1,40 @@
+static final int HEIGHT = 480;
+static final int WIDTH = 640;
+static final int DIAMETER = 10;
+int position = 0;
+
+   void settings() {
+        size(WIDTH, HEIGHT);
+    }
+    void setup(){
+  }
+
+   void draw() {
+        for (int speed = 1; speed <= 4; speed++) {
+            ellipse(speed*position,speed*HEIGHT/5,DIAMETER, DIAMETER);
+             position +=1;
+        }
+    }
+  
+  
+  or
+  
+static final int HEIGHT = 480;
+static final int WIDTH = 640;
+static final int DIAMETER = 10;
+int position = 0;
+
+   void settings() {
+        size(WIDTH, HEIGHT);
+    }
+    void setup(){
+  }
+
+   void draw() {
+            ellipse(position,HEIGHT/5,DIAMETER, DIAMETER);
+            ellipse(2*position,2*HEIGHT/5,DIAMETER, DIAMETER);
+            ellipse(3*position,3*HEIGHT/5,DIAMETER, DIAMETER);
+            ellipse(4*position,4*HEIGHT/5,DIAMETER, DIAMETER);
+             position +=1;
+        }
+    }
