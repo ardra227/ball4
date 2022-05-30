@@ -1,0 +1,43 @@
+static final int HEIGHT = 480;
+    static final int WIDTH = 640;
+    static final int DIAMETER = 10;
+    int position = 0;
+
+    void settings() {
+        super.settings();
+        size(WIDTH, HEIGHT);
+    }
+
+    void draw() {
+        for (int speed = 1; speed <= 4; speed++) {
+            ball(speed*position,speed*HEIGHT/5);
+        }
+        position +=1;
+    }
+    void draw() {
+        for (int speed = 1; speed <= 4; speed++) {
+            ball(speed*position,speed*HEIGHT/10);
+        }
+        position +=2;
+    }
+    void draw() {
+        for (int speed = 1; speed <= 4; speed++) {
+            ball(speed*position,speed*HEIGHT/15);
+        }
+        position +=2;
+    }
+    void draw() {
+        for (int speed = 1; speed <= 4; speed++) {
+            ball(speed*position,speed*HEIGHT/20);
+        }
+        position +=2;
+    }
+
+
+    void ball(int positionX, int height) {
+        ellipse(positionX,height,DIAMETER, DIAMETER);
+    }
+    
+     static void main(String[] args) {
+        PApplet.main("Procedural4ball",args);
+    }
